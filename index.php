@@ -14,3 +14,13 @@ var_dump($x);
 echo '<br>';
 
 var_dump($y);
+
+echo '<br>';
+
+echo PHP_VERSION;
+
+echo '<br>';
+
+echo __LINE__;
+
+echo '<br>';

@@ -24,3 +24,9 @@ echo '<br>';
 echo __LINE__;
 
 echo '<br>';
+
+echo 18 > 16 ?: '2';
+
+echo '<br>';
+
+

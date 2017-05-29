@@ -1,5 +1,7 @@
 <?php
 
+require_once 'settings.php';
+
 //echo 'Hello world';
 
 $x = 8.0 - 6.4;
@@ -25,7 +27,7 @@ echo __LINE__;
 
 echo '<br>';
 
-echo 18 > 16 ?: '2';
+var_dump(19 > 16 ?: 2);
 
 echo '<br>';
 

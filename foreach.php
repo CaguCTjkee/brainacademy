@@ -30,12 +30,15 @@ $arr = [
 
 foreach( $arr as $key => $val )
 {
-    if( stristr($val, '2') )
+    $needle = '2';
+
+    if( !stristr($val, $needle) )
     {
-        echo 'key is ' . $key . '<br>' . PHP_EOL;
-        echo '2 is here!!!';
-        break;
+        continue;
     }
+
+    echo 'key is ' . $key . '<br>' . PHP_EOL;
+    echo $needle . ' is here!!!';
 }
 echo '<br>' . PHP_EOL;
 echo '<br><pre>' . PHP_EOL;

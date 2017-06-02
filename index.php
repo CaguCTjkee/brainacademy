@@ -8,12 +8,7 @@ function test($par, $var)
     echo $par, $var;
 }
 
-function addFive(&$number)
-{
-    $number += 5;
-}
 // functions end
-
 
 $x = 8.0 - 6.4;
 $y = 1.6;
@@ -28,11 +23,11 @@ echo '<br>';
 
 var_dump($y);
 
-echo '<br>';
+echo '<br> PHP VERSION: ';
 
 echo PHP_VERSION;
 
-echo '<br>';
+echo '<br> Line is: ';
 
 echo __LINE__;
 
@@ -46,9 +41,24 @@ test(1, 2, 3, 4, 5);
 
 echo '<br>';
 
+function addFive(&$number)
+{
+    $number += 5;
+}
+
 $number = 3;
 addFive($number);
 var_dump($number);
 
-echo '<br>';
+echo '<br><br> Test who is first:<br>';
 
+function testEcho()
+{
+    echo 'This is will be first (echo): ' . func_num_args() . PHP_EOL;
+
+    return 1;
+}
+
+echo 'This is will be second (return): ' . testEcho(1, 2, 3);
+
+echo '<br>';
